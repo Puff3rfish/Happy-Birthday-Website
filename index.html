@@ -2,27 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>HBD.com</title>
+  <title>Cake</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <div class="center"> 
-    <img src="main page.png" class="main-image">
-  </div>
-  <div class="center"> 
-    <a href="#" id="startLink" class="start-button">Start</a>
-  </div>
+<body style="text-align:center;">
+  <h1 id="greeting" style="display:none;"></h1>
+  <img id="cake" src="cake.gif" alt="Cake" style="max-width:90%; height:auto;">
+  <audio id="music2" src="Happy Birthday.mp3" preload="auto"></audio>
+  <a href="#" id="exitBtn" class="wish-button" style="display:none; margin-top:24px;">Have a nice day!</a>
+
   <script src="script.js"></script>
   <script>
-    document.getElementById('startLink').addEventListener('click', function(e){
-      e.preventDefault();
-      let name = prompt("What's your name?");
-      if (name && name.trim() !== "") {
-        localStorage.setItem("username", name.trim());
-        localStorage.setItem("startMusic", "yes"); // tell slideshow to autoplay
-        window.location.href = "slideshow.html";
-}
-    });
+    startBlowDetection();
   </script>
 </body>
 </html>
