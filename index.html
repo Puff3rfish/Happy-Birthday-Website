@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>HBD.com</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="center"> 
+    <img src="main page.png" class="main-image">
+  </div>
+  <div class="center"> 
+    <input type="text" id="usernameInput" class="name-input" placeholder="Enter your name">
+    <a href="#" id="startLink" class="start-button">Start</a>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('startLink').addEventListener('click', function(e){
+      e.preventDefault();
+      const input = document.getElementById('usernameInput');
+      let name = input.value.trim();
+      if (name !== "") {
+        localStorage.setItem("username", name);
+        localStorage.setItem("startMusic", "yes"); // tell slideshow to autoplay
+        window.location.href = "slideshow.html";
+      } else {
+        input.focus();
+        input.placeholder = "Please enter your name!";
+      }
+    });
+  </script>
+</body>
+</html>
