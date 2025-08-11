@@ -34,7 +34,7 @@ function startConfetti(durationSec = 4) {
 
 // ---------- SLIDESHOW HANDLING ----------
 function startSlideshow() {
-  const images = ["Images/1.png","Images/2.png","Images/3.png","Images/4.png","Images/5.png","Images/6.png","Images/7.png","Images/8.png"];
+  const images = ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png"];
   let index = 0;
   const imgElement = document.getElementById("slideshow");
   const music1 = document.getElementById("music1");
@@ -149,4 +149,5 @@ function startBlowDetection() {
     }).catch(err => {
         console.error("Microphone access denied or error:", err);
     });
+
 }
