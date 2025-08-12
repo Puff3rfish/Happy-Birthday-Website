@@ -68,7 +68,7 @@ if (localStorage.getItem("startMusic") === "yes") {
       setTimeout(() => {
         index++;
         next();
-      }, 1000);
+      }, 3000);
     } else {
       // last image (8.png)
       // stop walkwithyou, start happybday
@@ -149,4 +149,5 @@ function startBlowDetection() {
     }).catch(err => {
         console.error("Microphone access denied or error:", err);
     });
+
 }
