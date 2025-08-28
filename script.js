@@ -109,7 +109,7 @@ function startBlowDetection() {
 
                 // Delay showing the greeting for dramatic effect
                 setTimeout(() => {
-                    greeting.textContent = `HAPPY BIRTHDAY, ${username}!`;
+                    greeting.textContent = `Happy Birthday, ${username}!`;
                     greeting.style.display = "block";
                     // Play Happy Birthday music
                     const music2 = document.getElementById("music2");
@@ -151,3 +151,4 @@ function startBlowDetection() {
     });
 
 }
+
